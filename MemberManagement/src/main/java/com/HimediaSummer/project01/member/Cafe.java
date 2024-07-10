@@ -7,38 +7,35 @@ import java.util.List;
 
 public class Cafe {
 
-    private List<managerMent> members;
+    private List<memberDTO> members;
 
     public Cafe() {
         members = new ArrayList<>();
     }
 
-    public void addBook(memberDTO memberNum) {
-        members.add(book);
+    public void addMember(memberDTO memberNum) {
+        members.add(memberNum);
     }
 
-    public memberDTO getBook(int isbn) {
-        for (memberDTO book : members) {
-            if (book.getIsbn() == isbn) {
-                return book;
+    public memberDTO getMember(int memNum) {
+        for (memberDTO memdto : members) {
+            if (memdto.getMemNum() == memNum) {
+                return memdto;
             }
         }
         return null;
     }
 
-    public void updateBook(int isbn, String title, String author) {
-        memberDTO book = getBook(isbn);
-        if (book != null) {
-            book.setTitle(title);
-            book.setAuthor(author);
+    public void updateMember(int memNum, String name, int age) {
+        memberDTO memdto = getMember(memNum);
+        if (memdto != null) {
+            memdto.setName(name);
+            memdto.setAge(age);
         }
     }
 
-    public void deleteBook(int isbn) {
-        books.removeIf(book -> book.getIsbn() == isbn);
-    }
+    public void deleteMember(int memNum) {
+        members.removeIf(memdto -> memdto.getMemNum() == memNum);
+    };
 
-    public List<memberDTO> getAllBooks() {
-        return books;
-    }
 }

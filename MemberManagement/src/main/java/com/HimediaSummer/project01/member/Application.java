@@ -28,10 +28,10 @@ public class Application {
 
             switch (num){
                 case 1:
+                    System.out.print("추가할 맴버이름: ");
+                    name = sc.next();
                     System.out.print("추가할 맴버코드: ");
                     memNum = sc.nextInt();
-                    System.out.print("추가할 맴버이름: ");
-                    name = sc.nextLine();
                     System.out.print("추가할 맴버나이: ");
                     age = sc.nextInt();
                     managerMent.addMember(memNum, name, age);
@@ -40,6 +40,7 @@ public class Application {
                 case 2:
                     System.out.print("조회할 맴버코드: ");
                     memNum = sc.nextInt();
+                    System.out.println("memNum " + memNum);
                     managerMent.getMember(memNum);
                     break;
 
