@@ -13,6 +13,8 @@ public class Application {
         int age;
 
         boolean loop = true;
+
+        System.out.println("git upload test");
         while (loop == true) {
 
             System.out.println("맴버 관리 프로그램");
