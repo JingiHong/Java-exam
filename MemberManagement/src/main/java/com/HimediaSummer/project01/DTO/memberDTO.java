@@ -5,9 +5,6 @@ public class memberDTO {
     String name;
     int age;
 
-    public memberDTO() {
-    }
-
     public memberDTO(int memNum, String name, int age) {
         this.memNum = memNum;
         this.name = name;
