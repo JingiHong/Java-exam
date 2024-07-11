@@ -5,11 +5,11 @@ import com.HimediaSummer.project01.DTO.memberDTO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cafe {
+public class memberController {
 
     private List<memberDTO> members;
 
-    public Cafe() {
+    public memberController() {
         members = new ArrayList<>();
     }
 

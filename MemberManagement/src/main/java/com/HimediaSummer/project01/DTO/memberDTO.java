@@ -37,10 +37,10 @@ public class memberDTO {
 
     @Override
     public String toString() {
-        return "memberDTO{" +
-                "memNum=" + memNum +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
+        return "회원정보 [ " +
+                "회원번호 = " + memNum +
+                ", 회원이름 = '" + name + '\'' +
+                ", 회원나이 = " + age +
+                ']';
     }
 }

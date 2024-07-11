@@ -6,7 +6,7 @@ public class Application {
 
     public static void main(String[] args) {
 
-        managerMent managerMent = new managerMent();
+        manageMent manageMent = new manageMent();
 
         int memNum;
         String name;
@@ -14,15 +14,16 @@ public class Application {
 
         boolean loop = true;
 
-        System.out.println("git upload test");
         while (loop == true) {
 
-            System.out.println("맴버 관리 프로그램");
-            System.out.println("1. 맴버 추가");
-            System.out.println("2. 맴버 조회");
-            System.out.println("3. 맴버 수정");
-            System.out.println("4. 맴버 삭제");
-            System.out.println("9. 종료");
+            System.out.println("=======================");
+            System.out.println("  회원 관리 프로그램");
+            System.out.println("  1. 회원 추가");
+            System.out.println("  2. 회원 조회");
+            System.out.println("  3. 회원 수정");
+            System.out.println("  4. 회원 삭제");
+            System.out.println("  9. 종료");
+            System.out.println("=======================");
             System.out.print("메뉴를 선택하세요: ");
 
             Scanner sc = new Scanner(System.in);
@@ -30,46 +31,47 @@ public class Application {
 
             switch (num){
                 case 1:
-                    System.out.print("추가할 맴버이름: ");
+                    System.out.print("추가할 회원이름: ");
                     name = sc.next();
-                    System.out.print("추가할 맴버코드: ");
+                    System.out.print("추가할 회원코드: ");
                     memNum = sc.nextInt();
-                    System.out.print("추가할 맴버나이: ");
+                    System.out.print("추가할 회원나이: ");
                     age = sc.nextInt();
-                    managerMent.addMember(memNum, name, age);
+                    manageMent.addMember(memNum, name, age);
                     break;
 
                 case 2:
-                    System.out.print("조회할 맴버코드: ");
+                    System.out.print("조회할 회원코드: ");
                     memNum = sc.nextInt();
-                    System.out.println("memNum " + memNum);
-                    managerMent.getMember(memNum);
+                    System.out.println("memNum =  " + memNum);
+                    manageMent.getMember(memNum);
                     break;
 
                 case 3:
-                    System.out.print("수정할 맴버코드 : ");
+                    System.out.print("수정할 회원코드 : ");
                     memNum = sc.nextInt();
                     sc.nextLine(); // Consume newline
-                    System.out.print("수정할 맴버이름 : ");
+                    System.out.print("수정할 회원이름 : ");
                     name  = sc.nextLine();
-                    System.out.print("수정할 맴버나이 : ");
+                    System.out.print("수정할 회원나이 : ");
                     age = sc.nextInt();
-                    managerMent.updateMember(memNum, name, age);
+                    manageMent.updateMember(memNum, name, age);
                     break;
 
                 case 4:
-                    System.out.print("삭제할 맴버코드 : ");
+                    System.out.print("삭제할 회원코드 : ");
                     memNum = sc.nextInt();
-                    managerMent.deleteMember(memNum);
+                    manageMent.deleteMember(memNum);
                     break;
 
                 case 9:
-                    System.out.println("프로그램을 종료합니다.");
+                    System.out.println("-------- End Of Program -------");
+                    System.out.println("---------- 감사합니다 ---------");
                     sc.close();
                     return;
 
                 default:
-                    System.out.println("잘못된 입력입니다.");
+                    System.out.println(" >>>>>>>> [ERROR] 잘못된 입력입니다.");
             }
         }
     }
