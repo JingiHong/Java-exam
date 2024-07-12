@@ -37,9 +37,17 @@ public class memberDTO {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return  "\n" +
                 "[회원 코드] = " + "[" + memNum + "]\n" +
                 "[회원 이름] = " + "[" + name + "]\n" +
                 "[회원 나이] = " + "[" + age + "]";
+=======
+        return "회원정보 [ " +
+                "회원번호 = " + memNum +
+                ", 회원이름 = '" + name + '\'' +
+                ", 회원나이 = " + age +
+                ']';
+>>>>>>> 126107da959b65551c5b0581dd1818505b741897
     }
 }
