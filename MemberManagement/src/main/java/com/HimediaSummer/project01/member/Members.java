@@ -5,16 +5,20 @@ import com.HimediaSummer.project01.DTO.memberDTO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cafe {
+public class Members {
 
     private List<memberDTO> members;
 
-    public Cafe() {
+    public Members() {
         members = new ArrayList<>();
     }
 
     public void addMember(memberDTO memberNum) {
         members.add(memberNum);
+    }
+
+    public void addName(memberDTO memberName){
+        members.add(memberName);
     }
 
     public memberDTO getMember(int memNum) {

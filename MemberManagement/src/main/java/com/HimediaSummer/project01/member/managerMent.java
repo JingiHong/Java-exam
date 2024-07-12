@@ -4,46 +4,43 @@ import com.HimediaSummer.project01.DTO.memberDTO;
 
 public class managerMent {
 
-    private Cafe cafe ;
+    private Members members ;
 
     public managerMent() {
-        cafe = new Cafe();
+        members = new Members();
     }
 
     public void addMember(int memNum, String name, int age ){
         memberDTO memdto = new memberDTO(memNum, name, age);
+        members.addMember(memdto);
 
-//        cafe.addMember(memdto);
-        cafe.addMember(memdto);
-
-        System.out.println("맴버가 추가되었습니다.");
+        System.out.println(name + " 회원(이)가 추가되었습니다.");
 
     }
 
     public void getMember(int memNum){
 
-        memberDTO memdto = cafe.getMember(memNum);
+        memberDTO memdto = members.getMember(memNum);
 
-
-        System.out.println(" 조회한 맴버 :  " + cafe.getMember(memNum));
+        System.out.println(" 조회한 회원 :  " + members.getMember(memNum));
 
         if (memNum == 0) {
-            System.out.println("맴버를 찾을 수 없습니다.");
+            System.out.println("회원을 찾을 수 없습니다.");
         }
 
     }
 
     public void updateMember(int memNum, String name, int age ){
 
-        cafe.updateMember(memNum, name, age);
-        System.out.println("맴버를 update 했습니다.");
+        members.updateMember(memNum, name, age);
+        System.out.println(name + " 회원을 update 했습니다.");
 
 
     }
 
     public void deleteMember(int memNum){
 
-        cafe.deleteMember(memNum);
+        members.deleteMember(memNum);
         System.out.println("맴버를 delete 했습니다.");
 
     }
